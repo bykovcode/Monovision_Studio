@@ -70,9 +70,11 @@ html {
 	}
 
 	@media screen and (max-width: 576px) {
-		background: url(../img/Bg.png);
 		min-height: 500px;
 		padding-top: 50px;
+		background-position-x: 70%;
+		background-position-y: 30%;
+		background-size: 110%;
 	}
 
 }
@@ -229,7 +231,7 @@ html {
 	}
 
 	@media screen and (max-width:1440px) {
-		padding: 0 20px;
+		padding: 0 15px;
 	}
 
 	@media screen and (max-width:576px) {
@@ -514,6 +516,14 @@ html {
 	font-weight: 400;
 	line-height: 48px;
 	text-align: center;
+
+	@media screen and (max-width: 768px) {
+		font-size: 36px;
+	}
+
+	@media screen and (max-width: 576px) {
+		font-size: 24px;
+	}
 }
 
 .ins__grid {
@@ -527,6 +537,23 @@ html {
 		box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
 		width: 100%;
 	}
+
+	@media screen and (max-width: 768px) {
+		& {
+			margin-top: 40px;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr;
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& {
+			column-gap: 0px;
+			row-gap: 20px;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(3, 1fr) 2.1fr 1fr 0.5fr;
+		}
+	}
 }
 
 
@@ -534,6 +561,25 @@ html {
 #six {
 	grid-column-start: 2;
 	grid-column-end: 4;
+
+	@media screen and (max-width: 768px) {
+		& {
+			grid-column-start: 1;
+			grid-column-end: 3;
+			grid-row-start: 4;
+			grid-row-end: 5;
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& {
+			gap: 0 20px;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 6;
+			grid-row-end: 7;
+		}
+	}
 }
 
 /* .six {
@@ -545,6 +591,24 @@ html {
 	grid-column-end: 5;
 	grid-row-start: 1;
 	grid-row-end: 3;
+
+	@media screen and (max-width: 768px) {
+		& {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 4;
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& {
+			grid-column-start: auto;
+			grid-column-end: auto;
+			grid-row-start: auto;
+			grid-row-end: auto;
+		}
+	}
 }
 
 /* .four{
@@ -556,6 +620,11 @@ html {
 	background-color: var(--light-color);
 	padding-top: 80px;
 
+	@media screen and (max-width: 768px) {
+		& {
+			padding-top: 50px;
+		}
+	}
 }
 
 .title__customers {
@@ -580,6 +649,20 @@ html {
 		background-color: black;
 
 	}
+
+	@media screen and (max-width: 768px) {
+		& {
+			font-size: 48px;
+			margin-top: 43px;
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& {
+			font-size: 44px;
+			margin-top: 33px;
+		}
+	}
 }
 
 .customers__img {
@@ -594,6 +677,35 @@ html {
 	img {
 		width: calc((100% - 90px) / 4);
 	}
+
+	@media screen and (max-width: 768px) {
+		& {
+			margin-top: 40px;
+			gap: 20px;
+		}
+
+		img {
+			width: calc((100% - 60px) / 4);
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& img {
+			width: calc((100% - 36px) / 2);
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& {
+			margin-top: 33px;
+			column-gap: 36px;
+			row-gap: 20px;
+			justify-content: space-between;
+		}
+	}
+
+
+
 }
 
 footer {
@@ -602,6 +714,21 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media screen and (max-width: 768px) {
+		& {
+			flex-direction: column;
+			padding: 30px var(--footer-padding-inline);
+			align-items: flex-start;
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& {
+			align-items: center;
+			padding: 35px var(--footer-padding-inline);
+		}
+	}
 }
 
 .footer__icons {
@@ -632,6 +759,21 @@ footer {
 			} */
 
 	}
+
+	@media screen and (max-width: 768px) {
+		& {
+
+			order: 1;
+
+
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& {
+			column-gap: 37px;
+		}
+	}
 }
 
 .footer_addr {
@@ -640,6 +782,22 @@ footer {
 	font-weight: 400;
 	line-height: 24px;
 	font-style: normal;
+
+	@media screen and (max-width: 768px) {
+		& {
+			margin-top: 35px;
+			order: 2;
+
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& {
+			order: 3;
+
+		}
+	}
+
 }
 
 .footer_tel {
@@ -648,4 +806,21 @@ footer {
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 24px;
+
+	@media screen and (max-width: 768px) {
+		& {
+
+			order: 3;
+			margin-top: 35px;
+
+		}
+	}
+
+	@media screen and (max-width: 568px) {
+		& {
+			order: 2;
+
+		}
+	}
+
 }
